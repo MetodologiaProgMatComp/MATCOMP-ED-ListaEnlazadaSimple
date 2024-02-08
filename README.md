@@ -9,3 +9,7 @@ elementos de la lista.
 ¿Qué mejoras harías?
 
 * Recuerda añadir test unitarios.
+
+Continua con el resto de listas.
+¿Qué cambios harías para mejorar el uso?
+Hazlos y demuestra la mejora.

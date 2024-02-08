@@ -2,12 +2,15 @@
 'https://plantuml.com/class-diagram
 
 class ListaSimple {
--primero:ElementoLS
+-datos:ElementoLS[]
+-maximo:int
 +isVacia():boolean
 +vaciar()
 -add(el:ElementoLS):int
 +add(s:String)
 +add(o:Object)
++insert(s:String,posicion:int)
++insert(o:Object,posicion:int)
 +del(posicion:int):int
 +getNumeroElementos():int
 +getPosicion(el:ElementoLS):int
@@ -18,12 +21,9 @@ class ListaSimple {
 }
 
 class ElementoLS {
--siguiente:ElementoLS
 -data:Object
--insertarmeEn(el:ElementoLS)
--getSiguiente():ElementoLS
 +getData():Object
-+setData():Object
++setData(o Object):Object
 }
 
 ListaSimple --> ElementoLS:primero
