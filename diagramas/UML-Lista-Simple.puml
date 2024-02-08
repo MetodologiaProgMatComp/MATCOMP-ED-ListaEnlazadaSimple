@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ListaSimple {
+-primero:ElementoLS
++isVacia():boolean
++vaciar()
+-add(el:ElementoLS):int
++add(s:String)
++add(o:Object)
++del(posicion:int):int
++getNumeroElementos():int
++getPosicion(el:ElementoLS):int
++getPrimero():ElementoLS
++getUltimo():ElementoLS
+-getSiguiente(el:ElementoLS):ElementoLS
++getElemento(posicion:int):ElementoLS
+}
+
+class ElementoLS {
+-siguiente:ElementoLS
+-data:Object
+-insertarmeEn(el:ElementoLS)
+-getSiguiente():ElementoLS
++getData():Object
++setData():Object
+}
+
+ListaSimple --> ElementoLS:primero
+ElementoLS --> ElementoLS:siguiente
+
+/' COMENTARIOS:
+note bottom on link
+    Esta es una nota para un enlace
+endnote
+
+note right of Elemento::siguiente
+  Esto es una nota
+end note
+'/
+@enduml
