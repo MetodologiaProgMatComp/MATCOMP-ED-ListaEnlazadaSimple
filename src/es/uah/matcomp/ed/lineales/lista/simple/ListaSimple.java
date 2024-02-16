@@ -11,7 +11,6 @@ public class ListaSimple {
     }
     protected void add (ElementoLS el) {
         data[0] = el;
-        return null;
     }
     public void add (String s, int i) {
     }
