@@ -15,6 +15,7 @@ public class ListaSimple {
     public void add (String s, int i) {
     }
     public void add (Object o) {
+        return null;
     }
     public void setElement (String s, int posicion){
     }
