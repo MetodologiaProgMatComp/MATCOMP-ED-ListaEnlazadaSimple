@@ -6,15 +6,28 @@ package es.uah.matcomp.ed.lineales.lista.simple;
 public class ListaSimple {
     private ElementoLS [] data;
     private int maximo;
-    public void isVacia() {
-        Boolean data = null;
+    public boolean isVacia() {
+        if (data.length == 0) {
+            return true;
+        }
+
+        return false;
+    }
+    public  void vaciar() {
+        ElementoLS [] data;
     }
     protected void add (ElementoLS el) {
-        data[0] = el;
+        data[data.length -1] = el;
     }
     public void add (String s, int i) {
+        ElementoLS elementoLS = new ElementoLS();
+        elementoLS.setData(new Object());
+        this.add(elementoLS);
     }
     public void add (Object o) {
+        ElementoLS elementoLS = new ElementoLS();
+        elementoLS.setData(o);
+        this.add(elementoLS);
     }
     public void setElement (String s, int posicion){
     }
