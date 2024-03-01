@@ -1,10 +1,10 @@
-package es.uah.matcomp.ed.lineales.lista.simple;
+package es.uah.matcomp.ed.lineales.lista.simple.src.es.uah.matcomp.ed.lineales.lista.simple;
 
 /**
  * Programar la lista simplemente enlazada.
  */
-public class ListaSimple {
-    private ElementoLS [] data;
+public class ListaSimple<S> {
+    private ElementoLS[] data;
     private int maximo;
     public boolean isVacia() {
         if (data.length == 0) {
@@ -16,28 +16,29 @@ public class ListaSimple {
     public  void vaciar() {
         ElementoLS [] data;
     }
-    protected void add (ElementoLS el) {
+
+    protected int add (ElementoLS el) {
         data[data.length -1] = el;
+        return data.length;
     }
-    public void add (String s, int i) {
+    public void add (String s) {
         ElementoLS elementoLS = new ElementoLS();
-        elementoLS.setData(new Object());
-        this.add(elementoLS);
+        elementoLS.setData(s);
     }
     public void add (Object o) {
         ElementoLS elementoLS = new ElementoLS();
         elementoLS.setData(o);
         this.add(elementoLS);
     }
-    public void setElement (String s, int posicion){
+    public void insertElement (String s, int posicion){
         ElementoLS elementoLS = new ElementoLS();
         elementoLS.setData(new String());
-        this.setElement(elementoLS, posicion);
+        this.insertElement(elementoLS, posicion);
     }
-    public void setElement (Object o, int posicion) {
+    public void insertElement (Object o, int posicion) {
         ElementoLS elementoLS = new ElementoLS();
         elementoLS.setData(new Object());
-        this.setElement(elementoLS, posicion);
+        this.insertElement(elementoLS, posicion);
     }
     public void remove (int posicion) {
         data[posicion] = null;
@@ -77,7 +78,7 @@ public class ListaSimple {
         ElementoLS j = data[i];
         return j;
     }
-    public ElementoLS getElemento(int posicion){
+    public ElementoLS getElemento(int posicion) {
         ElementoLS j = data[posicion];
         return j;
     }

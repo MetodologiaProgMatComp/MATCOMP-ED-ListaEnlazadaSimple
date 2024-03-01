@@ -1,19 +1,21 @@
-/**
- * Programa principal de prueba
+package es.uah.matcomp.ed.lineales.lista.simple.src;
+/*
+  Programa principal de prueba
  */
-import es.uah.matcomp.ed.lineales.lista.simple.*;
+import es.uah.matcomp.ed.lineales.lista.simple.src.es.uah.matcomp.ed.lineales.lista.simple.ElementoLS;
+import es.uah.matcomp.ed.lineales.lista.simple.src.es.uah.matcomp.ed.lineales.lista.simple.ListaSimple;
 
 public class main {
-    public static void main(String[] s){
-        ListaSimple l = new ListaSimple();
+    public static void main(String[]args){
+        ListaSimple <String> l = new ListaSimple<String>();
 
-        l.add("Primer elemento", 1);
-        l.add("Segundo elemento", 1);
+        l.add("Primer elemento");
+        l.add("Segundo elemento");
         ElementoLS elemento = l.getElemento(1);
         System.out.println(elemento.getData());
         System.out.println("Datos detallados");
         System.out.println(elemento);
-        l.add("entre el primero y el segundo",1);
+        l.add("entre el primero y el segundo");
 
     }
 }

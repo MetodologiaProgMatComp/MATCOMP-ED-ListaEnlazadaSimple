@@ -1,7 +1,7 @@
-package es.uah.matcomp.ed.lineales.lista.simple;
+package es.uah.matcomp.ed.lineales.lista.simple.src.es.uah.matcomp.ed.lineales.lista.simple;
 
 public class ElementoLS {
-    private Object data ;
+    private Object data;
 
     public Object getData() {
         return data;
