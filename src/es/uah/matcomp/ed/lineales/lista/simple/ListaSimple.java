@@ -30,6 +30,9 @@ public class ListaSimple {
         this.add(elementoLS);
     }
     public void setElement (String s, int posicion){
+        ElementoLS elementoLS = new ElementoLS();
+        elementoLS.setData(new String());
+        this.setElement(elementoLS, posicion);
     }
     public void setElement (Object o, int posicion) {
     }
