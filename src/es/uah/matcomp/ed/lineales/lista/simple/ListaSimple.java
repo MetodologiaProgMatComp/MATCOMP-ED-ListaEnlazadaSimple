@@ -54,11 +54,9 @@ public class ListaSimple {
         return j;
     }
     public int getPosicion(ElementoLS el){
-        int i;
-        for (i=0; el==data[i]; i += 1){
-            if (data[i] == el){
-            return i;
-            }
+        int i=0;
+        while (el!=data[i]) {
+            i++;
         }
         return i;
     }
