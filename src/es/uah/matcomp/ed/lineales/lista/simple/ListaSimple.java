@@ -35,6 +35,9 @@ public class ListaSimple {
         this.setElement(elementoLS, posicion);
     }
     public void setElement (Object o, int posicion) {
+        ElementoLS elementoLS = new ElementoLS();
+        elementoLS.setData(new Object());
+        this.setElement(elementoLS, posicion);
     }
     public void remove (int posicion) {
         data[0] = null;
