@@ -40,13 +40,27 @@ public class ListaSimple {
         this.setElement(elementoLS, posicion);
     }
     public void remove (int posicion) {
-        data[0] = null;
+        data[posicion] = null;
     }
-    public int getNumeroElementos (){
-        return 0;
+    public int getNumeroElementos(){
+        int i = 0;
+        int j = 0;
+        while (i < data.length){
+            if (data[i] != null){
+                j ++;
+            }
+            i++;
+        }
+        return j;
     }
     public int getPosicion(ElementoLS el){
-        return 0;
+        int i;
+        for (i=0; el==data[i]; i += 1){
+            if (data[i] == el){
+            return i;
+            }
+        }
+        return i;
     }
     public ElementoLS getPrimero(){
         return null;
