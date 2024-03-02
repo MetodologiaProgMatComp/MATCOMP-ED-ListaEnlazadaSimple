@@ -1,4 +1,4 @@
-package es.uah.matcomp.ed.lineales.lista.simple.src.es.uah.matcomp.ed.lineales.lista.simple;
+package es.uah.matcomp.ed.lineales.lista.simple;
 
 /**
  * Programar la lista simplemente enlazada.
@@ -10,7 +10,6 @@ public class ListaSimple<S> {
         if (data.length == 0) {
             return true;
         }
-
         return false;
     }
     public  void vaciar() {
