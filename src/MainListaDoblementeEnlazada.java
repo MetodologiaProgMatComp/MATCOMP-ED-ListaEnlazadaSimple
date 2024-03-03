@@ -18,9 +18,6 @@ public class MainListaDoblementeEnlazada {
         System.out.println(elementoLDE1);
         Object o = new Object();
         l.add("Al final");
-        ElementoLDE o = l.getElemento(4);
-        System.out.println(o.getData());
-        System.out.println("Datos detallados");
-        System.out.println(o);
+
     }
 }
