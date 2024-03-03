@@ -1,9 +1,8 @@
-package es.uah.matcomp.ed.lineales.lista.simple.src;
 /*
   Programa principal de prueba
  */
-import es.uah.matcomp.ed.lineales.lista.simple.src.es.uah.matcomp.ed.lineales.lista.simple.ElementoLS;
-import es.uah.matcomp.ed.lineales.lista.simple.src.es.uah.matcomp.ed.lineales.lista.simple.ListaSimple;
+import es.uah.matcomp.ed.lineales.lista.simple.ElementoLS;
+import es.uah.matcomp.ed.lineales.lista.simple.ListaSimple;
 
 public class main {
     public static void main(String[]args){

@@ -67,11 +67,19 @@ public class ListaDoblementeEnlazada {
             actual = actual.getSiguiente();
             contador ++;
         }
-        if (actual != null){
-            actual.getAnterior() = this.getAnterior();
-            this.getAnterior() = actual;
-            actual.getSiguiente() = this;
+        ElementoLDE p = primero;
+        contador = 0;
+        if (actual == p){
+            primero = p.getSiguiente();
+            contador ++;
         }
+        while (p.getSiguiente() != null){
+            if (p.getSiguiente() != actual){
+                p.insertarmeEn(p);
+                contador ++;
+            }
+        }
+        return contador;
     }
     public int getNumeroElementos(){
         ElementoLDE posicion = primero;
@@ -88,7 +96,6 @@ public class ListaDoblementeEnlazada {
         int contador = 0;
         while (posicion.getSiguiente() != el){
             contador ++;
-            el = el.getSiguiente();
         }
         return contador;
     }
