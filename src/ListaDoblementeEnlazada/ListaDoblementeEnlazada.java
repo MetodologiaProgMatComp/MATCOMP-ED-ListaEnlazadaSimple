@@ -43,22 +43,35 @@ public class ListaDoblementeEnlazada {
         elementoLDE.setData(s);
         int contador = 0;
         ElementoLDE actual = primero;
-        while (contador < posicion){
-            actual = actual.getSiguiente();
-            contador ++;
+        if (actual == null){
+            primero = elementoLDE;
+            ultimo = elementoLDE;
         }
-        actual.insertarmeEn(elementoLDE);
+        else {
+            while (contador < posicion){
+
+                actual = actual.getSiguiente();
+                contador ++;
+            }
+            actual.insertarmeEn(elementoLDE);
+        }
     }
     public void insert(Object o, int posicion){
         ElementoLDE elementoLDE = new ElementoLDE();
         elementoLDE.setData(o);
         int contador = 0;
         ElementoLDE actual = primero;
-        while (contador < posicion){
-            actual = actual.getSiguiente();
-            contador ++;
+        if (actual == null){
+            primero = elementoLDE;
+            ultimo = elementoLDE;
         }
-        actual.insertarmeEn(elementoLDE);
+        else{
+            while (contador < posicion){
+                actual = actual.getSiguiente();
+                contador ++;
+            }
+            actual.insertarmeEn(elementoLDE);
+        }
     }
     public int del (int posicion){
         ElementoLDE actual = primero;
@@ -93,11 +106,15 @@ public class ListaDoblementeEnlazada {
     }
     public int getPosicion(ElementoLDE el){
         ElementoLDE posicion = primero;
-        int contador = 0;
-        while (posicion.getSiguiente() != el){
+        int contador = 1;
+        while (posicion != null){
+            if (posicion == el){
+                return contador;
+            }
             contador ++;
+            posicion = posicion.getSiguiente();
         }
-        return contador;
+        return 0;
     }
     public ElementoLDE getPrimero(){
         return this.primero;
